@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Real Time Drowsiness Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Driver Assistance System</span></h1>
+            <div id="status-dot"></div>
+        </header>
+
+        <main class="main-content">
+            <section class="feed-container">
+                <div class="video-wrapper">
+                    <div class="overlay">LIVE FEED</div>
+                    <img id="video-stream" src="{{ url_for('video_feed') }}" style="width:100%; height:auto;">
+                </div>
+                
+                <div class="controls">
+                    <button id="start-btn" class="btn primary">Start Camera</button>
+                    <button id="switch-btn" class="btn secondary">Switch Camera</button>
+                </div>
+            </section>
+
+            <aside class="stats-panel">
+                <div class="status-card" id="status-card">
+                    <h3>Driver Status</h3>
+                    <p id="status-text">CAMERA OFF</p>
+                </div>
+                <div class="log-container">
+                    <h3>Alert History</h3>
+                    <ul id="alert-logs"></ul>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
