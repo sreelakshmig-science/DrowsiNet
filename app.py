@@ -17,13 +17,13 @@
     def compute(ptA, ptB):
         return np.linalg.norm(ptA - ptB)
 
-def blinked(a, b, c, d, e, f):
-    up = compute(b, d) + compute(c, e)
-    down = compute(a, f)
-    ratio = up / (2.0 * down)
-    if ratio > 0.25: return 2 # Active
-    elif ratio > 0.21: return 1 # Drowsy
-    else: return 0 # Sleeping
+    def blinked(a, b, c, d, e, f):
+        up = compute(b, d) + compute(c, e)
+        down = compute(a, f)
+        ratio = up / (2.0 * down)
+        if ratio > 0.25: return 2 # Active
+        elif ratio > 0.21: return 1 # Drowsy
+        else: return 0 # Sleeping
 
 def gen_frames():
     global current_status, sleep_count
