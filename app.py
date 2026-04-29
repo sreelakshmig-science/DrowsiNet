@@ -10,12 +10,12 @@
             detector = dlib.get_frontal_face_detector()
             predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
 
-    # Global variables for status tracking
-    current_status = "CAMERA OFF"
-    sleep_count = 0
-    
-    def compute(ptA, ptB):
-        return np.linalg.norm(ptA - ptB)
+            # Global variables for status tracking
+            current_status = "CAMERA OFF"
+            sleep_count = 0
+            
+            def compute(ptA, ptB):
+                return np.linalg.norm(ptA - ptB)
 
     def blinked(a, b, c, d, e, f):
         up = compute(b, d) + compute(c, e)
