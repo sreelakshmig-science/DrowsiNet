@@ -25,11 +25,11 @@
                 elif ratio > 0.21: return 1 # Drowsy
                 else: return 0 # Sleeping
 
-def gen_frames():
-    global current_status, sleep_count
-    # Using '0' for local webcam, change to your IP URL if needed
-    camera = cv2.VideoCapture(0) 
-    
+        def gen_frames():
+            global current_status, sleep_count
+            # Using '0' for local webcam, change to your IP URL if needed
+            camera = cv2.VideoCapture(0) 
+            
     while True:
         success, frame = camera.read()
         if not success:
