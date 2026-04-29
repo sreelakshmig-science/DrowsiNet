@@ -4,11 +4,11 @@
         from imutils import face_utils
         from flask import Flask, render_template, Response, jsonify
 
-    app = Flask(__name__)
-    
-    # Initialize Dlib
-    detector = dlib.get_frontal_face_detector()
-    predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
+            app = Flask(__name__)
+            
+            # Initialize Dlib
+            detector = dlib.get_frontal_face_detector()
+            predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
 
     # Global variables for status tracking
     current_status = "CAMERA OFF"
